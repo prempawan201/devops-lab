@@ -34,3 +34,8 @@ steps:
             terraform validate
             terraform plan
             terraform apply -auto-approve
+
+- script: |
+    echo "Listing resources..."
+    -ls -la
+  displayName: 'Debug Files'
