@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: devops-lap-pool
+  name: devops-lab-pool
 
 steps:
 - task: TerraformInstaller@1
