@@ -24,7 +24,7 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'k.prempawan1(cad883ef-38be-4c80-9913-4aaa7aac8d6d)'
+    azureSubscription: 'azure-conn'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
