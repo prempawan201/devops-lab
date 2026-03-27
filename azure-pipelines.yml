@@ -4,10 +4,10 @@
 # https://aka.ms/yaml
 
 trigger:
-- none
+- main
 
 pool:
-  name: 
+  name: devops-lap-pool
 
 steps:
 - task: TerraformInstaller@1
