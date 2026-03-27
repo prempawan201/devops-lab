@@ -14,4 +14,23 @@ steps:
   inputs:
     terraformVersion: 'latest'
 
-  
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      echo "Checking tools..."
+      terraform -version
+      az --version
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'k.prempawan1(cad883ef-38be-4c80-9913-4aaa7aac8d6d)'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      echo "Running Terraform..."
+            cd infra
+            terraform init
+            terraform validate
+            terraform plan
+            terraform apply -auto-approve
